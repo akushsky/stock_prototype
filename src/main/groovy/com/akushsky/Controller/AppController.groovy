@@ -1,7 +1,6 @@
 package com.akushsky.Controller
 
 import com.akushsky.Entity.Product
-import com.akushsky.Entity.ProductType
 import com.akushsky.Entity.ProductTypeEnum
 import com.akushsky.Repository.ExternProviderRepository
 import com.akushsky.Repository.ProductRepository
@@ -11,9 +10,6 @@ import org.springframework.stereotype.Controller
 import org.springframework.ui.ModelMap
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestMethod
-
-import java.util.stream.Collectors
-
 /**
  * Created by akushsky on 6/6/16.
  */
