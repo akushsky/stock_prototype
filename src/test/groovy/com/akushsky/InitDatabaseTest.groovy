@@ -32,7 +32,7 @@ public class InitDatabaseTest {
     ExternProviderRepository externProviderRepository;
 
     @Test
-    @Ignore
+//    @Ignore
     public void testInitDatabase() throws Exception {
         externProviderRepository.deleteAll()
         productTypeRepository.deleteAll()
