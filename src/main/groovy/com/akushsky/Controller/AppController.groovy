@@ -14,13 +14,6 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestMethod
 
 import javax.annotation.PostConstruct
-
-import static org.junit.Assert.assertNotEquals
-import static org.junit.Assert.assertNotEquals
-import static org.junit.Assert.assertNotEquals
-import static org.junit.Assert.assertNotEquals
-import static org.junit.Assert.assertNotEquals
-
 /**
  * Created by akushsky on 6/6/16.
  */
@@ -49,15 +42,11 @@ class AppController {
 
         ExternProvider providerResult = externProviderRepository.save(externProvider)
 
-        assertNotEquals(providerResult.id, 0)
-
         ProductType productTypeChanel5 = new ProductType()
         productTypeChanel5.name = "Chanel #5"
         productTypeChanel5.type = ProductTypeEnum.BULK;
 
         ProductType result = productTypeRepository.save(productTypeChanel5)
-
-        assertNotEquals(result.id, 0)
 
         Product product2 = new Product()
         product2.productType = result
@@ -66,8 +55,6 @@ class AppController {
         product2.stockCountReserved = 0
 
         Product productResult = productRepository.save(product2)
-
-        assertNotEquals(productResult.id, 0)
 
         ProductType productTypeChanel18 = new ProductType()
         productTypeChanel18.name = "Chanel #18"
@@ -80,8 +67,6 @@ class AppController {
 
         result = productTypeRepository.save(productTypeChanel18)
 
-        assertNotEquals(result.id, 0)
-
         Product product1 = new Product()
         product1.productType = result
         product1.bulk = 180
@@ -89,8 +74,6 @@ class AppController {
         product1.stockCountReserved = 0
 
         productResult = productRepository.save(product1)
-
-        assertNotEquals(productResult.id, 0)
     }
 
     /**
