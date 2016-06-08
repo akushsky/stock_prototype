@@ -48,6 +48,7 @@
     <%--</div>--%>
     <div class="well">
         <a href="<c:url value='/report' />">Show report</a>
+        <a href="<c:url value='/producttype' />">Show product types</a>
     </div>
 </div>
 </body>
