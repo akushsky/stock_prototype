@@ -1,7 +1,8 @@
-package com.akushsky.Service;
+package com.akushsky.Parser;
 
 import com.akushsky.Entity.ProductType;
 import com.akushsky.Entity.ProductTypeEnum;
+import com.akushsky.Parser.FragrancenetDataFeedParser;
 import org.junit.Before;
 import org.junit.Test;
 

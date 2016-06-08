@@ -1,4 +1,4 @@
-package com.akushsky.Service
+package com.akushsky.Parser
 
 import com.akushsky.Entity.ProductType
 import com.akushsky.Entity.ProductTypeEnum

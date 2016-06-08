@@ -1,4 +1,4 @@
-package com.akushsky.Service
+package com.akushsky.Parser
 
 import org.springframework.stereotype.Service
 /**
