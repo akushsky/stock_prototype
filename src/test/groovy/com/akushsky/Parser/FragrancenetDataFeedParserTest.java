@@ -39,7 +39,7 @@ public class FragrancenetDataFeedParserTest {
 
         ProductType testType = result.get(0);
 
-        assertEquals(testType.getName(), "Everlasting Foundation+ SPF15 - # 110 Honey --30ml/1.1oz");
+        assertEquals(testType.getName(), "Clarins by Clarins");
         assertEquals(testType.getType(), ProductTypeEnum.FULL);
     }
 }

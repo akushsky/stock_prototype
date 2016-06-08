@@ -2,9 +2,12 @@ package com.akushsky.Parser
 
 import com.akushsky.Entity.ProductType
 import com.akushsky.Entity.ProductTypeEnum
+import org.springframework.stereotype.Service
+
 /**
  * Concrete data feed parser
  */
+@Service
 class FragrancenetDataFeedParser implements DataFeedParser<ProductType> {
     @Override
     List<ProductType> parse(InputStream inputStream) {
@@ -24,9 +27,10 @@ class FragrancenetDataFeedParser implements DataFeedParser<ProductType> {
                 // Create new product type
                 ProductType productType = new ProductType();
                 // Name stores in 6 place
-                productType.name = variables[6];
+                productType.name = variables[3];
                 // Type check by 8ml attribute (format strange)
-                productType.type = productType.name.contains("--8ml") ? ProductTypeEnum.FACT : ProductTypeEnum.FULL
+                // TODO: Need add real parser for bulk
+                productType.type = variables[6].contains("--8ml") ? ProductTypeEnum.FACT : ProductTypeEnum.FULL
 
                 result.add(productType)
             }

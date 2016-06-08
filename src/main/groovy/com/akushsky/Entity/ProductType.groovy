@@ -8,7 +8,8 @@ import javax.persistence.*
 @Table(name = "ProductType")
 class ProductType extends BaseEntity {
 
-    @Column(name = "name", unique = true)
+    // TODO: Need composite key with type and composition
+    @Column(name = "name") //, unique = true)
     private String name;
 
     @Enumerated(EnumType.STRING)
@@ -17,7 +18,7 @@ class ProductType extends BaseEntity {
     @OneToMany(mappedBy = "productType")
     private Set<Product> products;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
     @JoinColumn(name = "extern_provider_id")
     private Set<ExternProvider> externProviders;
 
